@@ -8,7 +8,7 @@ This is a very simple example of how a native [[https://www.oracle.com/java/tech
 
 [[./images/overview.png]]
 
-** Use Minimal cases
+** Minimal use-cases
 
 - As Rust is relatively new in comparison to Java, there might be mature libraries that can be reused "almost as is"
 - If you're more comfortable with Java (just like me), you might code few parts of your Rust application in Java (as needed).
