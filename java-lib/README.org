@@ -1,0 +1,32 @@
+#+TITLE: java-lib README
+
+* What is this?
+
+This is a simple Java native library, the /helloworld/ example.
+
+The goal is to demonstrate how the /most trivial Java code/ that can be leveraged from another programming language such as Rust (=rust-app= project in this Git repository).
+
+* What is required?
+
+- [[https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.3.0/graalvm-ce-java11-linux-amd64-21.3.0.tar.gz][GraalVM]] in order to generate the native library from Java code
+- [[https://gradle.org][Gradle]] (optionally) for building the project: it can be auto-installed (Gradle wrapper)
+- [[https://llvm.org/][LLVM]] toolchain
+
+* How to build?
+
+This is a standard Gradle project but it does require =JAVA_HOME= and =GRAALVM_HOME= to be set to your =GRAALVM= installation folder.
+- If you have an existing gradle installation, please run =gradle nativeBuild=.
+- Otherwise, please invoke the gradle wrapper as follow =./gradlew nativeBuild=.
+
+The artifacts will be generate under =build/native/nativeBuild= (C header files and library).
+- =graal_isolate.h=
+- =graal_isolate_dynamic.h=
+- =libhelloapi.build_artifacts.txt=
+- =libhelloapi.h=
+- =libhelloapi.so=
+- =libhelloapi_dynamic.h=
+- =sources=
+
+
+
+

@@ -1,0 +1,15 @@
+plugins {
+  id 'java-library'
+  id 'org.graalvm.buildtools.native' version '0.9.4'
+}
+
+repositories {
+  mavenCentral()
+}
+
+nativeBuild {
+  imageName =  'libhelloapi'
+  debug = true
+  fallback = false
+  sharedLibrary = true
+}

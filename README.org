@@ -1,0 +1,57 @@
+#README rust-calls-java
+
+* What is this?
+
+** Overview
+
+This is a very simple example of how a native [[https://www.oracle.com/java/technologies/java-se-glance.html][Java]] library can be created and called from [[https://www.rust-lang.org/][Rust]] programs.
+
+[[./images/overview.png]]
+
+** Use Minimal cases
+
+- As Rust is relatively new in comparison to Java, there might be mature libraries that can be reused "almost as is"
+- If you're more comfortable with Java (just like me), you might code few parts of your Rust application in Java (as needed).
+  - I don't know Rust that well and there are programs that would literally take me few hours in Java (vs. few days in Rust)
+  - There are several mature Java libraries with no direct equivalent in Rust, that I'd rather not write myself from scratch.
+
+* How do I run this?
+
+TL;DR
+
+#+begin_src sh
+  podman build -t localhost/rust-calls-java .
+  podman image prune --filter label=stage=rust-calls-java-builder
+  podman run localhost/rust-calls-java
+#+end_src
+
+** Option 1 - From Docker or Podman
+You'll need to have either [[https://www.docker.com/][Docker]] or [[https://podman.io/][Podman]] installed first. I'll use =podman= as this is what I have installed, but it's literally the same syntax for =docker=.
+
+*** Build the container image
+
+At the root of this repository, run the following command.
+
+#+begin_src sh
+podman build -t localhost/rust-calls-java .
+#+end_src
+
+*** Run the rust executable from the container image
+
+#+begin_src sh
+podman run localhost/rust-calls-java
+#+end_src
+
+** Option 2 - From your local machine
+
+Follow the instructions available in the projects in this git repository:
+- First, build the =java-lib= project
+- Then, you should be able to build and run the =rust-app= project
+
+* References
+
+- https://www.graalvm.org/reference-manual/native-image/ImplementingNativeMethodsInJavaWithSVM/
+- https://www.rapidwright.io/docs/Call_RapidWright_From_CPP.html
+- https://rust-lang.github.io/rust-bindgen/ 
+- https://github.com/babashka/sci/tree/master/libsci
+- https://github.com/borkdude/clojure-rust-graalvm
