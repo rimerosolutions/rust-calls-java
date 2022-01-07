@@ -1,4 +1,4 @@
-#README rust-app
+#+TITLE: rust-app README
 
 * What is this?
 
