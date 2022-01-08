@@ -26,6 +26,7 @@ TL;DR
 #+end_src
 
 ** Option 1 - From Docker or Podman
+
 You'll need to have either [[https://www.docker.com/][Docker]] or [[https://podman.io/][Podman]] installed first. I'll use =podman= as this is what I have installed, but it's literally the same syntax for =docker=.
 
 *** Build the container image
@@ -55,3 +56,5 @@ Follow the instructions available in the projects in this git repository:
 - https://rust-lang.github.io/rust-bindgen/ 
 - https://github.com/babashka/sci/tree/master/libsci
 - https://github.com/borkdude/clojure-rust-graalvm
+- https://medium.com/graalvm/isolates-and-compressed-references-more-flexible-and-efficient-memory-management-for-graalvm-a044cc50b67e
+- https://docs.oracle.com/en/graalvm/enterprise/20/docs/reference-manual/native-image/C-API/

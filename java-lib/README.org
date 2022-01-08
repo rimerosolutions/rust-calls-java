@@ -8,9 +8,9 @@ The goal is to demonstrate how the /most trivial Java code/ that can be leverage
 
 * What is required?
 
-- [[https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.3.0/graalvm-ce-java11-linux-amd64-21.3.0.tar.gz][GraalVM]] in order to generate the native library from Java code
+- [[https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-21.3.0][GraalVM]] in order to generate the native library from Java code (=graalvm-ce-java11-linux-amd64-21.3.0.tar.gz= for Linux amd64).
 - [[https://gradle.org][Gradle]] (optionally) for building the project: it can be auto-installed (Gradle wrapper)
-- [[https://llvm.org/][LLVM]] toolchain
+- [[https://www.graalvm.org/reference-manual/llvm/Compiling/][LLVM]] and other libraries (zlib, ar, etc.)
 
 * How to build?
 
